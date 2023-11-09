@@ -1,0 +1,22 @@
+<div class="container" [class.dark]="modeChange">
+  <section class="header">
+    <div class="nav-bar">
+      <span class="logo">Yves</span>
+      <nav class="nav-menu">
+        <ul [class.show-menu]="navMenu">
+          <li><a routerLinkActive="active" (click)="menuDisplay()" routerLink="home">Home</a></li>
+          <li><a routerLinkActive="active" (click)="menuDisplay()" routerLink="about">About Me</a></li>
+          <li><a routerLinkActive="active" (click)="menuDisplay()" routerLink="menu">Project</a></li>
+          <li><a routerLinkActive="active" (click)="menuDisplay()" routerLink="service">Service</a></li>
+          <li><a routerLinkActive="active" (click)="menuDisplay()" routerLink="contact">Contact</a></li>
+          <li><a routerLinkActive="active" (click)="menuDisplay()" routerLink="pay">Payment</a></li>
+        </ul>
+        <div class="nav-toggle">
+          <i (click)="menuDisplay()" class='bx bx-grid-alt'></i>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
